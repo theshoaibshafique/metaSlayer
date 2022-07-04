@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 import swal from '@sweetalert/with-react';
 import SelectCharacter from './Components/SelectCharacter';
@@ -8,10 +7,6 @@ import myEpicGame from './utils/MyEpicGame.json';
 import { ethers } from 'ethers';
 import Arena from './Components/Arena';
 import LoadingIndicator from './Components/LoadingIndicator';
-
-// Constants
-const TWITTER_HANDLE = '_buildspace';
-const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState(null);
@@ -138,9 +133,6 @@ const App = () => {
 
   // Render Methods
   const renderContent = () => {
-    {
-      console.log(isLoading);
-    }
     if (isLoading) {
       return <LoadingIndicator />;
     }
